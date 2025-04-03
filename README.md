@@ -3,7 +3,7 @@ About the Project 📌
 घुमक्कड़ is more than just a travel platform—it’s a movement! We aim to create meaningful travel experiences where adventurers give back to the communities they visit.
 
 
-🌱 Key Features:
+🌱 Key Features-
 
 Book a Trip 📅 – Plan seamless trekking & camping adventures.
 
@@ -21,7 +21,8 @@ NGO & Local Community Integration ❤️ – Connect with organizations that mak
 
 
 
-Tech Stack 🛠️
+Tech Stack 🛠️-
+
 
 Frontend: HTML, CSS, JavaScript
 
@@ -32,7 +33,8 @@ APIs: Gemini AI API, Formspree
 Styling: Vanilla CSS, Bootstrap
 
 
-Future Enhancements 🚀
+Future Enhancements 🚀-
+
 🔜 Partnering with more NGOs & Schools for greater impact.
 
 🔜 Adding a "Skill Swap" feature where travelers can share expertise.
