@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHUMAKKAD - Book a Trip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">GHUMAKKAD</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html">Book a Trip</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="booking-container">
+    <div class="booking-form">
+        <h2>Plan Your Adventure</h2>
+        <p>Select your dream trekking or camping location and customize your journey.</p>
+
+        <form id="bookingForm" action="https://formspree.io/f/mgvazqzw" method="POST">
+             <label>Your Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label>Your Email:</label>
+    <input type="email" id="email" name="email" required />
+            <label>Choose Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="">-- Select Destination --</option>
+                <option value="Kinnaur, Himachal Pradesh">Kinnaur, Himachal Pradesh</option>
+                <option value="Ziro Valley, Arunachal Pradesh">Ziro Valley, Arunachal Pradesh</option>
+                <option value="Munnar, Kerala">Munnar, Kerala</option>
+                <option value="Darjeeling, West Bengal">Darjeeling, West Bengal</option>
+                <option value="Changtang, Ladakh">Changtang, Ladakh</option>
+                <option value="Mawsynram Village, Meghalaya">Mawsynram Village, Meghalaya</option>
+                <option value="Brahmatal Trek, Uttarakhand">Brahmatal Trek, Uttarakhand</option>
+                <option value="Dhanushkodi, Kerala">Dhanushkodi, Kerala</option>
+                <option value="Loktak Lake, Manipur">Loktak Lake, Manipur</option>
+                <option value="Majuli Island, Assam">Majuli Island, Assam</option>
+            </select>
+
+            <label>Select Date:</label>
+            <input type="date" id="date" name="date" required />
+
+            <label>Number of Travelers:</label>
+            <input type="number" id="travelers" name="travelers" min="1" required />
+
+            <label>Would you like to contribute to local communities?</label>
+            <select id="contribute" name="contribute" required>
+                <option value="Yes, I’d love to donate/teach">Yes, I’d love to donate/teach</option>
+                <option value="No, just exploring">No, just exploring</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+    
+</div>
+
+
+
+<script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(this);
+
+        fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        }).then(response => {
+            if (response.ok) {
+                alert("Your booking request has been sent successfully!");
+                window.location.href = "thankyou.html"; // Redirect to Thank You Page
+            } else {
+                alert("Error submitting the form. Try again.");
+            }
+        }).catch(error => {
+            console.error("Error:", error);
+            alert("There was a problem submitting your form.");
+        });
+    });
+</script>
+
+</body>
+</html>

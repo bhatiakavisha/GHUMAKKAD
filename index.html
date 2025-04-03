@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHUMAKKAD</title>
+    <style>
+    .chatbot-container {
+        width: 350px;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .chat-header {
+        background: #ff9100;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .chat-box {
+        height: 300px;
+        overflow-y: auto;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .chat-input {
+        display: flex;
+        padding: 10px;
+    }
+
+    .chat-input input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .chat-input button {
+        background: #fe6100;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        margin-left: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+    }
+
+    .chat-input button:hover {
+        background: #e55a00; 
+        transform: scale(1.05); 
+    }
+
+    .featured-treks, .gallery-section {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .featured-treks > h2 {
+        color: #333;
+    }
+
+    .trek-card {
+        display: inline-block;
+        width: 30%;
+        margin: 1.5%;
+        vertical-align: top;
+        position: relative;
+        padding-bottom: 60px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .trek-card img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+         
+    }
+
+    .trek-card h3 {
+        margin: 10px 0 5px;
+        font-size: 1.2em;
+    }
+
+    .trek-card p {
+        margin: 5px 0 10px;
+        font-size: 0.9em;
+    }
+
+    .btn-explore {
+        background: #ff9100;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        font-size: 1em;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+    }
+
+    .btn-explore:hover {
+        background: #e08100; 
+        transform: translateX(-50%) scale(1.05); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-book {
+        background: #ff9100;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-book:hover {
+        background: #e08100;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-item {
+        display: inline-block;
+        width: 30%;
+        margin: 1.5%;
+        vertical-align: top;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .gallery-item p {
+        margin: 10px 0;
+    }
+
+</style>
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">GHUMAKKAD</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book a Trip</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="tagline-section">
+        <h1 class="big-tagline">Want to travel with meaning?</h1>
+        <p class="sub-tagline">Discover hidden gems, empower local dreams.</p>
+        <div class="hero-section">
+            <a href="booking.html" class="btn-book">Book a Trip</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-content">
+        <div class="about-box">
+            <h2>Our Mission</h2>
+            <p>GHUMAKKAD is more than just a travel booking site. We aim to take trekkers and campers to underrated & spiritual locations in India while also giving back to local communities.</p>
+        </div>
+    
+        <div class="about-box">
+            <h2>Why We Exist?</h2>
+            <p>Many beautiful trekking spots remain unexplored. Our platform helps connect like-minded travelers and offers a chance to teach and donate to locals.</p>
+        </div>
+    
+        <div class="about-box">
+            <h2>Impact Through Data</h2>
+            <p>Our analysis shows that 70% of travelers prefer immersive experiences over luxury travel. By adding a community-helping aspect, we bring a meaningful impact.</p>
+        </div>
+    </section>
+
+    <section class="featured-treks">
+        <h2>Explore Our Top Treks</h2>
+<div class="trek-card">
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Himalayan Trek">
+    <h3>Himalayan Adventure</h3>
+    <p>5 Days | Moderate | ₹12,000</p>
+    <a href="booking.html" class="btn-explore">Book Now</a>
+</div>
+
+<div class="trek-card">
+    <img src="https://images.unsplash.com/photo-1503265192943-9d7eea6fc77a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sahyadri Trek">
+    <h3>Sahyadri Trails</h3>
+    <p>3 Days | Easy | ₹8,000</p>
+    <a href="booking.html" class="btn-explore">Book Now</a>
+</div>
+        <div class="trek-card">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Spiritual Trek">
+            <h3>Spiritual Peaks</h3>
+            <p>7 Days | Hard | ₹18,000</p>
+            <a href="booking.html" class="btn-explore">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="about-stats">
+        <h2>Our Achievements So Far</h2>
+        <div class="stats-container">
+            <div class="stat">
+                <h3>500+</h3>
+                <p>Successful Trips</p>
+            </div>
+            <div class="stat">
+                <h3>1000+</h3>
+                <p>Local Families Helped</p>
+            </div>
+            <div class="stat">
+                <h3>95%</h3>
+                <p>Customer Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+    <h2>Memories from the Trails</h2>
+    <div class="gallery-item">
+        <img src=https://th.bing.com/th/id/OIP.XymATepLYRjzdQvvkAWuPgHaE7?w=260&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Trekking Group">
+        <p>Group enjoying the sunset atop a peak.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://th.bing.com/th/id/OIP.UJMeDyfwu3WJ6-aTFbJnGQHaEJ?w=322&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Local Interaction">
+        <p>Trekkers Savor Sunset on Peak.</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://th.bing.com/th/id/OIP.G2I-veETDzqv6Nksx1hB5QHaFR?w=263&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Campfire Night">
+        <p>Campfire night under the stars.</p>
+    </div>
+</section>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chat-header">💬 Gemini AI Chat</div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 GHUMAKKAD | Explore. Connect. Give Back.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            class Chatbot {
+                constructor() {
+                    this.API_KEY = "AIzaSyBxIX5Xv6Rjdl381pzuP9EF4P-nMmoSp_s";
+                    this.API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${this.API_KEY}`;
+                    
+                    this.chatbotContainer = document.querySelector(".chatbot-container");
+                    this.chatHeader = document.querySelector(".chat-header");
+                    this.chatBox = document.getElementById("chat-box");
+                    this.userInput = document.getElementById("user-input");
+                    
+                    this.createChatToggleButton();
+                    this.createMinimizeButton();
+                    this.addEventListeners();
+                }
+
+                createChatToggleButton() {
+                    this.chatToggleButton = document.createElement("button");
+                    this.chatToggleButton.innerHTML = "💬 Gemini AI Chat";
+                    Object.assign(this.chatToggleButton.style, {
+                        position: "fixed",
+                        bottom: "20px",
+                        right: "20px",
+                        background: "#ff9100",
+                        color: "white",
+                        border: "none",
+                        padding: "10px 15px",
+                        borderRadius: "5px",
+                        cursor: "pointer"
+                    });
+                    document.body.appendChild(this.chatToggleButton);
+                    this.chatbotContainer.style.display = "none";
+                    
+                    this.chatToggleButton.addEventListener("click", () => {
+                        this.chatbotContainer.style.display = "block";
+                        this.chatToggleButton.style.display = "none";
+                    });
+                }
+
+                createMinimizeButton() {
+                    this.minimizeButton = document.createElement("button");
+                    this.minimizeButton.innerHTML = "−";
+                    Object.assign(this.minimizeButton.style, {
+                        position: "absolute",
+                        top: "5px",
+                        right: "10px",
+                        background: "#ff9100",
+                        color: "white",
+                        border: "none",
+                        padding: "5px 10px",
+                        borderRadius: "5px",
+                        cursor: "pointer"
+                    });
+                    this.chatHeader.appendChild(this.minimizeButton);
+                    
+                    this.minimizeButton.addEventListener("click", () => {
+                        this.chatbotContainer.style.display = "none";
+                        this.chatToggleButton.style.display = "block";
+                    });
+                }
+
+                async sendMessage() {
+                    const userMessage = this.userInput.value.trim();
+                    if (!userMessage) return;
+                    
+                    this.appendMessage("Me: " + userMessage, "black");
+                    this.userInput.value = "";
+                    
+                    try {
+                        const response = await fetch(this.API_URL, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ contents: [{ parts: [{ text: userMessage }] }] })
+                        });
+                        
+                        if (!response.ok) throw new Error("API Error: " + response.statusText);
+                        
+                        const data = await response.json();
+                        const botReply = data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response from AI.";
+                        this.appendMessage("Gemini: " + botReply, "green");
+                        
+                    } catch (error) {
+                        console.error("Error fetching Gemini AI:", error);
+                        this.appendMessage("Gemini: Error fetching response.", "red");
+                    }
+                    
+                    this.chatBox.scrollTop = this.chatBox.scrollHeight;
+                }
+
+                appendMessage(message, color) {
+                    const messageDiv = document.createElement("div");
+                    messageDiv.textContent = message;
+                    messageDiv.style.color = color;
+                    messageDiv.style.margin = "5px 0";
+                    this.chatBox.appendChild(messageDiv);
+                }
+
+                addEventListeners() {
+                    document.querySelector(".chat-input button").addEventListener("click", () => this.sendMessage());
+                    this.userInput.addEventListener("keypress", (event) => {
+                        if (event.key === "Enter") this.sendMessage();
+                    });
+                }
+            }
+
+            new Chatbot();
+        });
+    </script>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
