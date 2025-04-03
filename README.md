@@ -44,4 +44,4 @@ Future Enhancements 🚀-
 
 🔜 Enabling a donation system for those who can’t travel but want to contribute.
 
-Live Demo- https://bhatiakavisha.github.io/GHUMAKKAD/
+Live Demo- https://bhatiakavisha.github.io/GHUMAKKAD/  
