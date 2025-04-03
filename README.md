@@ -1,4 +1,5 @@
 GHUMAKKAD - Explore | Experience | Empower 🌍🏕️
+
 About the Project 📌
 घुमक्कड़ is more than just a travel platform—it’s a movement! We aim to create meaningful travel experiences where adventurers give back to the communities they visit.
 
@@ -42,3 +43,5 @@ Future Enhancements 🚀-
 🔜 Expanding to remote villages across India.
 
 🔜 Enabling a donation system for those who can’t travel but want to contribute.
+
+Live Demo- https://bhatiakavisha.github.io/GHUMAKKAD/
